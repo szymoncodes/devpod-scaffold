@@ -1,0 +1,31 @@
+{
+  "build": {
+    "dockerfile": "./Dockerfile",
+    "context": "."
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "installZsh": "true",
+      "configureZshAsDefaultShell": "true",
+      "username": "szymon",
+      "userUid": "1000",
+      "userGid": "1000",
+      "upgradePackages": "true"
+    },
+    "ghcr.io/devcontainers/features/git:1": {
+      "version": "latest",
+      "ppa": "false"
+    },
+    "ghcr.io/devcontainers-extra/features/uv:1": {},
+    "ghcr.io/duduribeiro/devcontainer-features/neovim:1": {
+      "version": "nightly"
+    },
+    "ghcr.io/duduribeiro/devcontainer-features/tmux:1": {
+      "version": "latest"
+    },
+    "ghcr.io/meaningful-ooo/devcontainer-features/homebrew:2": {}
+  },
+  // "forwardPorts": [80, 443],
+  // "postCreateCommand": "uname -a",
+  "remoteUser": "szymon"
+}
