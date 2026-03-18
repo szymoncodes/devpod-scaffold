@@ -25,9 +25,12 @@
     },
     "ghcr.io/meaningful-ooo/devcontainer-features/homebrew:2": {},
     "ghcr.io/devcontainers/features/go:1": {},
-    "ghcr.io/jayree/devcontainer-features/npm-registry:1": {}
+    "ghcr.io/jayree/devcontainer-features/npm-registry:1": {},
+    "ghcr.io/devcontainers/features/python:1": {
+      "installTools": "false"
+    }
   },
   // "forwardPorts": [80, 443],
-  "postCreateCommand": "bash ./setup.sh",
+  "postCreateCommand": "bash .devcontainer/setup.sh",
   "remoteUser": "szymon"
 }
