@@ -15,14 +15,6 @@ brew install \
   python \
   golang \
   npm \
-  gopls \
-  lua-language-server \
-  prettier \
-  ruff \
-  stylua \
-  tinymist \
-  ty \
-  typstyle
 
 echo "Cleaning home directory..."
 cd && rm -rf .bash_logout .bashrc .oh-my-zsh .zcom*
