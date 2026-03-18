@@ -1,12 +1,11 @@
 {
-  "build": {
-    "dockerfile": "./Dockerfile",
-    "context": "."
-  },
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
   "features": {
     "ghcr.io/devcontainers/features/common-utils:2": {
       "installZsh": "true",
       "configureZshAsDefaultShell": "true",
+      "installOhMyZsh": "false",
+      "installOhMyZshConfig": "false",
       "username": "szymon",
       "userUid": "1000",
       "userGid": "1000",
@@ -16,11 +15,29 @@
       "version": "latest",
       "ppa": "false"
     },
+    "ghcr.io/phil-bell/devcontainer-features/antigen:1": {
+      "bundles": [
+        "zsh-users/zsh-syntax-highlighting",
+        "zsh-users/zsh-autosuggestions"
+      ]
+    },
+    "ghcr.io/devcontainers-extra/features/fzf:1": {},
+    "ghcr.io/jsburckhardt/devcontainer-features/bat:1": {},
+    "ghcr.io/devcontainers-extra/features/fd:1": {},
+    "ghcr.io/devcontainers-extra/features/ripgrep:1": {},
+    "ghcr.io/kreemer/features/stow:1": {},
+    "ghcr.io/devcontainer-community/devcontainer-features/starship.rs:1": {},
+    "ghcr.io/ttyrho/devcontainer-features/gcc:1": {},
     "ghcr.io/devcontainers-extra/features/uv:1": {},
+    "ghcr.io/devcontainers-extra/features/tmux-apt-get:1": {},
     "ghcr.io/duduribeiro/devcontainer-features/neovim:1": {
       "version": "nightly"
     },
-    "ghcr.io/meaningful-ooo/devcontainer-features/homebrew:2": {},
+    "ghcr.io/devcontainers/features/go:1": {},
+    "ghcr.io/devcontainers/features/python:1": {
+      "installTools": "false"
+    },
+    "ghcr.io/devcontainers/features/node:1": {}
   },
   // "forwardPorts": [80, 443],
   "postCreateCommand": "bash .devcontainer/setup.sh",
