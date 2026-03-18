@@ -28,6 +28,6 @@
     "ghcr.io/jayree/devcontainer-features/npm-registry:1": {}
   },
   // "forwardPorts": [80, 443],
-  // "postCreateCommand": "uname -a",
+  "postCreateCommand": "bash ./setup.sh",
   "remoteUser": "szymon"
 }
