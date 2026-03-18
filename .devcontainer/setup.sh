@@ -1,6 +1,14 @@
 #!/bin/bash
 echo "Setting up basic project structure..."
 
+echo "Installing project tools..."
+packages=(
+  python
+  uv
+  ruff
+  ty
+)
+
 echo "Initialising uv..."
 cd .. && cd .. && cd workspaces && cd $(ls)
 uv init && uv venv 
@@ -10,13 +18,6 @@ mkdir -p data
 mkdir -p exports
 mv main.py src/${PWD##*/}/main.py
 
-echo "Installing project tools..."
-packages=(
-  python
-  uv
-  ruff
-  ty
-)
 
 for pkg in "${packages[@]}"; do
   echo "Installing $pkg..."
