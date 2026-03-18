@@ -11,10 +11,6 @@ mkdir exports
 mv main.py src/${PWD##*/}/main.py
 
 echo "Downloading extra pkgs..."
-brew install \
-  python \
-  golang \
-  npm \
 
 echo "Cleaning home directory..."
 cd && rm -rf .bash_logout .bashrc .oh-my-zsh .zcom*
