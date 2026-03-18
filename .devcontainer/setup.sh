@@ -2,17 +2,25 @@
 echo "Setting up basic project structure..."
 
 echo "Initialising uv..."
-cd && cd .. && cd .. && cd workspaces && cd $(ls)
+cd .. && cd .. && cd workspaces && cd $(ls)
 uv init && uv venv 
 mkdir -p src/${PWD##*/}
-mkdir docs
-mkdir data
-mkdir exports
+mkdir -p docs
+mkdir -p data
+mkdir -p exports
 mv main.py src/${PWD##*/}/main.py
 
-echo "Downloading extra pkgs..."
+echo "Installing project tools..."
+packages=(
+  python
+  uv
+  ruff
+  ty
+)
 
-echo "Cleaning home directory..."
-cd && rm -rf .bash_logout .bashrc .oh-my-zsh .zcom*
+for pkg in "${packages[@]}"; do
+  echo "Installing $pkg..."
+  brew install $pkg
+done
 
 echo "Project setup finished."
