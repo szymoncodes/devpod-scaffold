@@ -23,7 +23,9 @@
     "ghcr.io/duduribeiro/devcontainer-features/tmux:1": {
       "version": "latest"
     },
-    "ghcr.io/meaningful-ooo/devcontainer-features/homebrew:2": {}
+    "ghcr.io/meaningful-ooo/devcontainer-features/homebrew:2": {},
+    "ghcr.io/devcontainers/features/go:1": {},
+    "ghcr.io/jayree/devcontainer-features/npm-registry:1": {}
   },
   // "forwardPorts": [80, 443],
   // "postCreateCommand": "uname -a",
